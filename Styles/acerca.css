@@ -1,43 +1,115 @@
 .about-content {
-        background-color: #FFA500; 
-        color: #000000; 
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        font-family: "Oswald", sans-serif;
+  background-color: #ffa500;
+  color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Oswald", sans-serif;
   letter-spacing: -0.06em;
-    }
+}
 
-    .about-content h4 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
+.about-content h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
-    .about-content p {
-        font-size: 16px;
-        line-height: 1.5;
-        margin-bottom: 15px;
-    }
+.about-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
 
-    .about-content ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+.about-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .about-content ul li {
-        font-size: 16px;
-        margin-bottom: 5px;
-        font-family: cursive;
-    }
+.about-content ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-family: cursive;
+}
 
-    .about-content ul li a {
-        color: #000000; 
-        text-decoration: none;
-        font-weight: bold;
-        font-family: cursive;
-    }
+.about-content ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: cursive;
+}
 
-    .about-content ul li a:hover {
-        color: #FFA500; 
-    }
+.about-content ul li a:hover {
+  color: #ffa500;
+}
+
+#equipo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#equipo-div {
+  justify-content: center;
+  width: 80%px;
+  height: auto;
+  align-items: center;
+}
+
+.OurTeam-block {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  margin-top: 15px;
+  margin: 15px;
+  font-family: "Oswald", sans-serif;
+}
+.OurTeam-block-title h3 {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 80px;
+}
+
+.OurTeam .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  margin: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #000000;
+}
+.card .image img {
+  width: 100%;
+  height: 100%;
+}
+.OurTeam-content {
+  padding: 10px;
+  font-family: "Oswald", sans-serif;
+
+}
+.OurTeam-content-info .content-info-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.OurTeam-content-info .content-info-role {
+  font-size: 20px;
+  color: white;
+}
+.content-info-user {
+  font-size: 15px;
+  color: white;
+  text-decoration: none; 
+  cursor: pointer;
+}
+
+.content-info-user:hover{
+color: #ffa500;
+text-decoration: underline;
+}

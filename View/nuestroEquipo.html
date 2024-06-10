@@ -64,47 +64,69 @@
         </div>
     </section>
 
-    <section class="equipo">
-        <div class="div5">
-            <div class="div5-contenido">
-                <h4>NUESTRO EQUIPO DE TRABAJO</h4>
-                <hr class="bold-hr">
-            </div>
+    <div id="NuestroEquipo"class="OurTeam-block">
+        <div class="OurTeam-block-title">
         </div>
-    
-        <div class="miembro">
-            <h3>Quality Analyst</h3>
-            <img src="../Assets/images/Sebastian ortiz.jpeg" alt="Sebastian Ortiz Posada" class="resized-image">
-            <p>Sebastian Ortiz Posada</p>
-            <li><a href="https://www.instagram.com/sebasortiz1406?igsh=bHZsbTducjJtd3Z5&utm_source=qr"> @sebasortiz1406</a></li>
+        <div class="OurTeam">
+          <div class="cards">
+            
+          </div>
         </div>
-    
-        <div class="miembro">
-            <h3>Product Owner</h3>
-            <img src="../Assets/images/Samuel Zapata.jpeg" alt="Samuel Zapata Montoya" class="resized-image">
-            <p>Samuel Zapata Montoya</p>
-            <li><a href="https://www.instagram.com/samuelzapatam22/"> @samuelzapatam22</a></li>
+      </div>
+  
+      <script>
+        const cards = [
+  {
+    name: "Sebastian Ortiz",
+    role: "Quality Analyst",
+    image: "../Assets/images/Sebastian ortiz.jpeg",
+    ig: "https://www.instagram.com/sebasortiz1406?igsh=bHZsbTducjJtd3Z5&utm_source=qr",
+    user: "@sebasortiz1406",
+  },
+  {
+    name: "Samuel Zapata",
+    role: "Product Owner",
+    image: "../Assets/images/Samuel Zapata.jpeg",
+    ig: "https://www.instagram.com/samuelzapatam22/",
+    user: "@samuelzapatam22"
+  },
+  {
+    name: "Juan Jose Correa",
+    role: "Scrum Master",
+    image: "../Assets/images/Juan Jose Correa.jpeg",
+    ig: "https://www.instagram.com/juanjosec2609/?hl=es-la",
+    user: "@juanjosec2609"
+  },
+  {
+    name: "Andres Zuluaga",
+    role: "Tech Lead",
+    image: "../Assets/images/Andres Zuluaga M (1).jpeg",
+    ig: "https://www.instagram.com/andreszuluaga05_?igsh=MWQ3M3c4cTlxOWVseQ==",
+    user: "@andreszuluaga05_"
+  }
+];
 
-        </div>
-    
-        <div class="miembro">
-            <h3>Scrum Master</h3>
-            <img src="../Assets/images/Juan Jose Correa.jpeg" alt="Juan Jose Correa Areiza" class="resized-image">
-            <p>Juan Jose Correa Areiza</p>
-            <li><a href="https://www.instagram.com/juanjosec2609/?hl=es-la"> @juanjosec2609</a></li>
+const cardsContainer = document.querySelector('.cards');
 
-        </div>
-    
-        <div class="miembro">
-            <h3>Tech Lead</h3>
-            <img src="../Assets/images/Andres Zuluaga M (1).jpeg" alt="Andrés Zuluaga Duque" class="resized-image">
-            <p>Andrés Zuluaga Duque</p>
-            <li><a href="https://www.instagram.com/andreszuluaga05_?igsh=MWQ3M3c4cTlxOWVseQ=="> @andreszuluaga05_</a></li>
+cards.forEach(card => {
+  const cardElement = document.createElement('div');
+  cardElement.classList.add('card');
+  cardElement.innerHTML = `
+    <div class="image">
+      <img src="${card.image}" alt="${card.name}" />
+    </div>
+    <div class="OurTeam-content">
+      <div class="OurTeam-content-info">
+        <h5 class="content-info-name">${card.name}</h5>
+        <p class="content-info-role">${card.role}</p>
+        <a class="content-info-user" href="${card.ig}">${card.user}</a>
+      </div>
+    </div>
+  `;
+  cardsContainer.appendChild(cardElement);
+});
 
-        </div>
-        <hr class="bold-hr">
-
-    </section>
+      </script>
     
     <footer>
         <div class="footer">
