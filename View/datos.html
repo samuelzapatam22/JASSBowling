@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Datos</title>
+    <link rel="stylesheet" href="../Styles/datos.css">
+    <link rel="icon" href="../Assets/images/JassLogo-removebg-preview.png">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Actualizar Datos Personales</h1>
+        <form id="datosForm">
+            <label for="nombreCompleto">Nombre:</label>
+            <input type="text" id="nombreCompleto" name="nombreCompleto" required><br><br>
+            <label for="nombreCompleto">Apellido:</label>
+            <input type="text" id="apellidocompleto" name="nombreCompleto" required><br><br>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br><br>
+
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select><br><br>
+
+            <label for="numeroContacto">Número de Contacto:</label>
+            <input type="tel" id="numeroContacto" name="numeroContacto" pattern="[0-9]{10}" required><br><br>
+
+            <label for="correoElectronico">Dirección de Correo Electrónico:</label>
+            <input type="email" id="correoElectronico" name="correoElectronico" required><br><br>
+
+            <button id="updatebtn" type="submit">Actualizar Datos</button>
+        </form>
+        <button onclick="window.location.href='../View/perfil.html'" style="margin-top: 20px;">Regresar a mi perfil</button>
+    </div>
+    <script src="../functions/actualizar.js"></script>
+</body>
+</html>
+
+
+
+

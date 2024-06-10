@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../Styles/styles.css" />
+    <link rel="icon" href="../Assets/images/JassLogo-removebg-preview.png">
+
+    <title>JASS Bowling</title>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="navbar">
+        <div id="Logo-nombre" class="d-flex align-items-center">
+          <img id="Logo" src="../Assets/images/JassLogo.png" alt="Logo">
+          <h4 id="nombre">jass bowling</h4>
+        </div>
+        <div id="navbarNav" class="d-flex align-items-center">
+          <a class="nav-link" id="navInicio" href="./inicio.html">INICIO</a>
+          <a class="nav-link" id="navCatalogo" href="./catalogo.html";
+          ">CATÁLOGO</a>
+          <a class="nav-link" id="navInfoGeneral" href="./infoGeneral.html">INFORMACIÓN GENERAL</a>
+          <a class="nav-link" id="navNuestroEquipo" href="./nuestroEquipo.html">NOSOTROS</a>
+          <a id="navBar-right-btn" class="configuracion" href="javascript:void(0);" onclick="toggleSettingsMenu()">
+            <img src="../Assets/images/configuracion-removebg-preview.png" alt="Configuracion">
+          </a>
+          <a id="navBar-right-btn" class="carrito" href="./carrito.html" id="navCart">
+            <img src="../Assets/images/carritoNaranja.png" alt="Carrito">
+          </a>
+          <a id="navBar-right-btn" class="perfil" href="./perfil.html" id="navProfile">
+            <img src="../Assets/images/perfilNaranja-removebg-preview.png" alt="perfil">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div id="settingsMenu" class="settings-menu">
+      <button id="closeButton" onclick="toggleSettingsMenu()">✖</button>
+      <h3 id="settingsTitle">Configuración</h3>
+      <fieldset>
+        <legend>Elige un idioma:</legend>
+        <label><input type="radio" name="language" value="es" onclick="changeLanguage(this.value)"> Español - Spanish</label>
+        <label><input type="radio" name="language" value="en" onclick="changeLanguage(this.value)"> Inglés - English</label>
+        <label><input type="radio" name="language" value="fr" onclick="changeLanguage(this.value)"> Francés - French</label>
+        <label><input type="radio" name="language" value="pt" onclick="changeLanguage(this.value)"> Portugués - Portuguese</label>
+      </fieldset>
+      <fieldset>
+        <legend>Elige un diseño de fuente:</legend>
+        <label><input type="radio" name="font" value="Arial" onclick="changeFont(this.value)"> Arial</label>
+        <label><input type="radio" name="font" value="Courier New" onclick="changeFont(this.value)"> Courier New</label>
+        <label><input type="radio" name="font" value="Georgia" onclick="changeFont(this.value)"> Georgia</label>
+        <label><input type="radio" name="font" value="Times New Roman" onclick="changeFont(this.value)"> Times New Roman</label>
+        <label><input type="radio" name="font" value="Verdana" onclick="changeFont(this.value)"> Verdana</label>
+      </fieldset>
+    </div>
+
+    <div id="banner">
+      <div class="banner-info">
+        <h2 class="banner-info-title">
+          ¡Descubre todo lo que <br />
+          necesitas para llevar <br />
+          tu juego de bolos al <br />
+          siguiente nivel!
+        </h2>
+      </div>
+    </div>
+
+    <div id="descripcion">
+      <div class="div1">
+        <div class="div1-contenido">
+          <h4>PERSONALIZA</h4>
+          <p>¡Refleja tu estilo en cada Accesorio!</p>
+        </div>
+      </div>
+      <div class="div2">
+        <h4>COMPRA</h4>
+        <p>¡Adquiere nuestra alta gama de Implementos!</p>
+      </div>
+      <div class="div3">
+        <h4>DISFRUTA</h4>
+        <p>¡Potencia tu rendimiento con Calidad!</p>
+      </div>
+    </div>
+    <div class="sobreNosotros">
+      <h2 class="sobreNosotros-title">
+        ¡Prepárate para mejorar tu juego y disfrutar de la emoción de los bolos!
+      </h2>
+      <p class="sobreNosotros-descripcion">
+        En JASS Bowling, nos dedicamos a ofrecer la mejor experiencia en bolos
+        en Colombia. Nuestra tienda en línea está pensada para los amantes de
+        este deporte, ofreciendo productos de alta calidad para boliches de
+        todos los niveles. Desde bolas y zapatos especializados hasta accesorios
+        y equipos de última generación, en JASS Bowling encontrarás todo lo que
+        necesitas para disfrutar al máximo de tu pasión por los bolos. Explora
+        nuestra tienda y descubre una amplia variedad de productos de las
+        mejores marcas, respaldados por nuestro compromiso con la excelencia en
+        el servicio al cliente.
+      </p>
+      <a href="">Descubre más aquí</a>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="footer-Logo">
+          <img src="../Assets/images/logoBlanco y negro.png" alt="">
+        </div>
+        <div class="footer-contactanos">
+          <h4 id="footerContactanos">CONTACTANOS</h4>
+          <p id="footerWebsite">WWW.JASSBOWLING.COM</p>
+        </div>
+        <div class="footer-llamanos">
+          <h4 id="footerComunicacion">COMUNICATE CON NOSOTROS</h4>
+          <p id="footerEmail">JASSBOWLING@GMAIL.COM</p>
+        </div>
+        <div class="footer-whatsapp">
+          <h4 id="footerWhatsapp">WHATSAPP</h4>
+          <p id="footerTelefono">3006683032</p>
+        </div>
+        <div class="footer-redes">
+          <a class="redes" href="https://www.facebook.com/profile.php?id=61560694317953">
+            <img src="../Assets/images/facebook.png" alt="facebook">
+          </a>
+          <a class="redes" href="https://www.instagram.com/jassbowling/">
+            <img src="../Assets/images/ig.png" alt="instagram">
+          </a>
+          <a class="redes" href="https://x.com/BowlingJass">
+            <img src="../Assets/images/x.png" alt="x">
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="../functions/configuracion.js"></script>
+  </body>
+</html>

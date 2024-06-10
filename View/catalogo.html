@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../Styles/styles.css" />
+    <link rel="icon" href="../Assets/images/JassLogo-removebg-preview.png">
+
+    <title>Catálogo</title>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar" class="navbar">
+        <div id="Logo-nombre" class="d-flex align-items-center">
+          <img id="Logo" src="../Assets/images/JassLogo.png" alt="Logo">
+          <h4 id="nombre">jass bowling</h4>
+        </div>
+        <div id="navbarNav" class="d-flex align-items-center">
+          <a class="nav-link" id="navInicio" href="./inicio.html">INICIO</a>
+          <a class="nav-link" id="navCatalogo" href="./catalogo.html";
+          ">CATÁLOGO</a>
+          <a class="nav-link" id="navInfoGeneral" href="./infoGeneral.html">INFORMACIÓN GENERAL</a>
+          <a class="nav-link" id="navNuestroEquipo" href="./nuestroEquipo.html">NOSOTROS</a>
+          <a id="navBar-right-btn" class="configuracion" href="javascript:void(0);" onclick="toggleSettingsMenu()">
+            <img src="../Assets/images/configuracion-removebg-preview.png" alt="Configuracion">
+          </a>
+          <a id="navBar-right-btn" class="carrito" href="./carrito.html" id="navCart">
+            <img src="../Assets/images/carritoNaranja.png" alt="Carrito">
+          </a>
+          <a id="navBar-right-btn" class="perfil" href="./perfil.html" id="navProfile">
+            <img src="../Assets/images/perfilNaranja-removebg-preview.png" alt="perfil">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div id="settingsMenu" class="settings-menu">
+      <button id="closeButton" onclick="toggleSettingsMenu()">✖</button>
+      <h3 id="settingsTitle">Configuración</h3>
+      <fieldset>
+        <legend>Elige un idioma:</legend>
+        <label
+          ><input
+            type="radio"
+            name="language"
+            value="es"
+            onclick="changeLanguage(this.value)"
+          />
+          Español - Spanish</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="language"
+            value="en"
+            onclick="changeLanguage(this.value)"
+          />
+          Inglés - English</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="language"
+            value="fr"
+            onclick="changeLanguage(this.value)"
+          />
+          Francés - French</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="language"
+            value="pt"
+            onclick="changeLanguage(this.value)"
+          />
+          Portugués - Portuguese</label
+        >
+      </fieldset>
+      <fieldset>
+        <legend>Elige un diseño de fuente:</legend>
+        <label
+          ><input
+            type="radio"
+            name="font"
+            value="Arial"
+            onclick="changeFont(this.value)"
+          />
+          Arial</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="font"
+            value="Courier New"
+            onclick="changeFont(this.value)"
+          />
+          Courier New</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="font"
+            value="Georgia"
+            onclick="changeFont(this.value)"
+          />
+          Georgia</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="font"
+            value="Times New Roman"
+            onclick="changeFont(this.value)"
+          />
+          Times New Roman</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="font"
+            value="Verdana"
+            onclick="changeFont(this.value)"
+          />
+          Verdana</label
+        >
+      </fieldset>
+    </div>
+
+    <div class="articulos-container">
+      <div class="implementos-block">
+        <h1 class="catalogo-titulo">IMPLEMENTOS</h1>
+      </div>
+      <div class="cards-implementos"></div>
+      <div class="ropa-block">
+        <h1 class="catalogo-titulo">ROPA</h1>
+      </div>
+      <div class="cards-ropa"></div>
+      <div class="accesorios-block">
+        <h1 class="catalogo-titulo">ACCESORIOS</h1>
+      </div>
+      <div class="cards-accesorios"></div>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-Logo">
+          <img src="../Assets/images/logoBlanco y negro.png" alt="">
+        </div>
+        <div class="footer-contactanos">
+          <h4 id="footerContactanos">CONTACTANOS</h4>
+          <p id="footerWebsite">WWW.JASSBOWLING.COM</p>
+        </div>
+        <div class="footer-llamanos">
+          <h4 id="footerComunicacion">COMUNICATE CON NOSOTROS</h4>
+          <p id="footerEmail">JASSBOWLING@GMAIL.COM</p>
+        </div>
+        <div class="footer-whatsapp">
+          <h4 id="footerWhatsapp">WHATSAPP</h4>
+          <p id="footerTelefono">3006683032</p>
+        </div>
+        <div class="footer-redes">
+          <a class="redes" href="https://www.facebook.com/profile.php?id=61560694317953">
+            <img src="../Assets/images/facebook.png" alt="facebook">
+          </a>
+          <a class="redes" href="https://www.instagram.com/jassbowling/">
+            <img src="../Assets/images/ig.png" alt="instagram">
+          </a>
+          <a class="redes" href="https://x.com/BowlingJass">
+            <img src="../Assets/images/x.png" alt="x">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../functions/catalogo.js"></script>
+  <script src="../functions/configuracion.js"></script>
+</html>

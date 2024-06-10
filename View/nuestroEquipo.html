@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Equipo</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/acerca.css">
+    <link rel="icon" href="../Assets/images/JassLogo-removebg-preview.png">
+
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="navbar">
+          <div id="Logo-nombre" class="d-flex align-items-center">
+            <img id="Logo" src="../Assets/images/JassLogo.png" alt="Logo">
+            <h4 id="nombre">jass bowling</h4>
+          </div>
+          <div id="navbarNav" class="d-flex align-items-center">
+            <a class="nav-link" id="navInicio" href="./inicio.html">INICIO</a>
+            <a class="nav-link" id="navCatalogo" href="./catalogo.html";
+            ">CATÁLOGO</a>
+            <a class="nav-link" id="navInfoGeneral" href="./infoGeneral.html">INFORMACIÓN GENERAL</a>
+            <a class="nav-link" id="navNuestroEquipo" href="./nuestroEquipo.html">NOSOTROS</a>
+            <a id="navBar-right-btn" class="configuracion" href="javascript:void(0);" onclick="toggleSettingsMenu()">
+              <img src="../Assets/images/configuracion-removebg-preview.png" alt="Configuracion">
+            </a>
+            <a id="navBar-right-btn" class="carrito" href="./carrito.html" id="navCart">
+              <img src="../Assets/images/carritoNaranja.png" alt="Carrito">
+            </a>
+            <a id="navBar-right-btn" class="perfil" href="./perfil.html" id="navProfile">
+              <img src="../Assets/images/perfilNaranja-removebg-preview.png" alt="perfil">
+            </a>
+          </div>
+        </nav>
+      </header>
+      <div id="settingsMenu" class="settings-menu">
+        <button id="closeButton" onclick="toggleSettingsMenu()">✖</button>
+        <h3 id="settingsTitle">Configuración</h3>
+        <fieldset>
+          <legend>Elige un idioma:</legend>
+          <label><input type="radio" name="language" value="es" onclick="changeLanguage(this.value)"> Español - Spanish</label>
+          <label><input type="radio" name="language" value="en" onclick="changeLanguage(this.value)"> Inglés - English</label>
+          <label><input type="radio" name="language" value="fr" onclick="changeLanguage(this.value)"> Francés - French</label>
+          <label><input type="radio" name="language" value="pt" onclick="changeLanguage(this.value)"> Portugués - Portuguese</label>
+        </fieldset>
+        <fieldset>
+          <legend>Elige un diseño de fuente:</legend>
+          <label><input type="radio" name="font" value="Arial" onclick="changeFont(this.value)"> Arial</label>
+          <label><input type="radio" name="font" value="Courier New" onclick="changeFont(this.value)"> Courier New</label>
+          <label><input type="radio" name="font" value="Georgia" onclick="changeFont(this.value)"> Georgia</label>
+          <label><input type="radio" name="font" value="Times New Roman" onclick="changeFont(this.value)"> Times New Roman</label>
+          <label><input type="radio" name="font" value="Verdana" onclick="changeFont(this.value)"> Verdana</label>
+        </fieldset>
+      </div>
+
+      <section id="aboutStore" class="about-store">
+        <div class="about-content">
+            <h4>Acerca de la Tienda</h4>
+            <li>Somos una tienda online especializada en artículos y accesorios para bowling. Nuestra pasión por este deporte nos impulsó a crear esta plataforma para brindar a nuestros clientes una experiencia única de compra y acceso a productos de calidad. En Jass Bowling, nos esforzamos por ofrecer una amplia gama de productos, atención al cliente excepcional y precios competitivos.</li>
+            
+            <li>Creada por un equipo apasionado por el bowling, estamos comprometidos con la excelencia y la satisfacción del cliente en cada paso del camino.</li>
+            <li>Síguenos en Instagram para estar al tanto de nuestras últimas novedades y promociones.</li>
+        </div>
+    </section>
+
+    <section class="equipo">
+        <div class="div5">
+            <div class="div5-contenido">
+                <h4>NUESTRO EQUIPO DE TRABAJO</h4>
+                <hr class="bold-hr">
+            </div>
+        </div>
+    
+        <div class="miembro">
+            <h3>Quality Analyst</h3>
+            <img src="../Assets/images/Sebastian ortiz.jpeg" alt="Sebastian Ortiz Posada" class="resized-image">
+            <p>Sebastian Ortiz Posada</p>
+            <li><a href="https://www.instagram.com/sebasortiz1406?igsh=bHZsbTducjJtd3Z5&utm_source=qr"> @sebasortiz1406</a></li>
+        </div>
+    
+        <div class="miembro">
+            <h3>Product Owner</h3>
+            <img src="../Assets/images/Samuel Zapata.jpeg" alt="Samuel Zapata Montoya" class="resized-image">
+            <p>Samuel Zapata Montoya</p>
+            <li><a href="https://www.instagram.com/samuelzapatam22/"> @samuelzapatam22</a></li>
+
+        </div>
+    
+        <div class="miembro">
+            <h3>Scrum Master</h3>
+            <img src="../Assets/images/Juan Jose Correa.jpeg" alt="Juan Jose Correa Areiza" class="resized-image">
+            <p>Juan Jose Correa Areiza</p>
+            <li><a href="https://www.instagram.com/juanjosec2609/?hl=es-la"> @juanjosec2609</a></li>
+
+        </div>
+    
+        <div class="miembro">
+            <h3>Tech Lead</h3>
+            <img src="../Assets/images/Andres Zuluaga M (1).jpeg" alt="Andrés Zuluaga Duque" class="resized-image">
+            <p>Andrés Zuluaga Duque</p>
+            <li><a href="https://www.instagram.com/andreszuluaga05_?igsh=MWQ3M3c4cTlxOWVseQ=="> @andreszuluaga05_</a></li>
+
+        </div>
+        <hr class="bold-hr">
+
+    </section>
+    
+    <footer>
+        <div class="footer">
+            <div class="footer-Logo">
+                <img src="../Assets/images/logoBlanco y negro.png" alt="">
+            </div>
+            <div class="footer-contactanos">
+                <h4>CONTACTANOS</h4>
+                <p>WWW.JASSBOWLING.COM</p>
+            </div>
+            <div class="footer-llamanos">
+                <h4>COMUNICATE CON NOSOTROS</h4>
+                <p>JASSBOWLING@GMAIL.COM</p>
+            </div>
+            <div class="footer-whatsapp">
+                <h4>WHATSAPP</h4>
+                <p>3006683032</p>
+            </div>
+            <div class="footer-redes">
+                <a class="redes" href="https://www.facebook.com/profile.php?id=61560694317953">
+                    <img src="../Assets/images/facebook.png" alt="facebook">
+                </a>
+                <a class="redes" href="https://www.instagram.com/jassbowling/">
+                    <img src="../Assets/images/ig.png" alt="instagram">
+                </a>
+                <a class="redes" href="https://x.com/BowlingJass">
+                    <img src="../Assets/images/x.png" alt="x">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="../functions/configuracion.js"></script>
+</body>
+</html>

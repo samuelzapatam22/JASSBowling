@@ -1,0 +1,86 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../Assets/images/fondoRegistro.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.02em;
+  font-size: 15px;
+}
+
+.registro-background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  padding-right: 160px;
+}
+
+.registro-left-side {
+  text-align: center;
+  color: black;
+  margin-right: 50px;
+}
+.registro-left-side p {
+  text-align: center;
+  color: black;
+  margin-right: 50px;
+}
+
+.registro-logo {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.register-phrase {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.registro-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.registro-box {
+  width: 350px;
+}
+
+.registro-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.registro-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f26b1d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registro-box button:hover {
+  background-color: black;
+  color: white;
+}

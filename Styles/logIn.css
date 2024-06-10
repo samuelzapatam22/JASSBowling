@@ -1,0 +1,87 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../Assets/images/fondoLogIn.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.02em;
+  font-size: 15px;
+}
+
+.login-container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.login-container h4{
+    color: black;
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+.login-logo {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+.login-box {
+  width: 450px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f26b1d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.login-box button:hover {
+  background-color: black;
+  color: white;
+}
+
+.login-box p {
+  margin-top: 10px;
+  color: #333;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.02em;
+  font-size: 15px;
+}
+
+.login-box a {
+  color: #f26b1d;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}

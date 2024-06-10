@@ -1,0 +1,633 @@
+body {
+  overflow-x: hidden;
+}
+
+#navbar {
+  width: 100vw;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+#Logo-nombre {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 30%;
+}
+
+#Logo {
+  width: 25%;
+  max-width: 150px;
+}
+
+#nombre {
+  margin-left: 10px;
+  color: black;
+  font-size: 2.9411764706em;
+  line-height: 92%;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.06em;
+  font-weight: bold;
+}
+
+#navbarNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.06em;
+  font-weight: bold;
+  font-size: 20px;
+  width: 70%;
+}
+
+.nav-link {
+  margin: 10px;
+  border: 1px outset rgb(180, 180, 180);
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-link:hover {
+  background-color: #f26b1d;
+  color: white;
+}
+
+#boton-buscar {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.02em;
+  font-size: 15px;
+  border: 1px solid rgb(180, 180, 180);
+}
+
+#boton-buscar:hover {
+  background-color: #f26b1d;
+  color: white;
+}
+
+#navBar-right-btn img {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  padding: 0;
+}
+.footer {
+  display: flex;
+  background-color: #f26b1d;
+  width: 100vw;
+  height: 200px;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+.footer-Logo {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 30%;
+  margin-right: -200px;
+  padding: 0;
+}
+.footer-Logo img {
+  width: 180px;
+  height: auto;
+}
+
+.footer h4 {
+  color: black;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.footer P {
+  color: black;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.footer-contactanos .footer-llamanos {
+  justify-content: center;
+  align-content: flex-start;
+  display: flexbox;
+}
+.footer-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-redes .redes {
+  margin: 0 10px;
+}
+
+.footer-redes img {
+  width: 30px;
+  height: auto;
+}
+
+.login-container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.login-box {
+  width: 200px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #0056b3;
+}
+
+.login-box p {
+  margin-top: 10px;
+  color: #333;
+}
+
+.login-box a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+#banner {
+  background-image: url("../Assets/images/fondoIndex.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  width: 100%;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-info-title {
+  text-align: center;
+  color: black;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.06em;
+  font-weight: bold;
+  font-size: 60px;
+  margin: 0;
+}
+#descripcion {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f26b1d;
+}
+#descripcion div h4 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.06em;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+}
+
+#descripcion {
+  display: flex;
+}
+
+#descripcion div {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.06em;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.div1 {
+  background-color: black;
+  color: white;
+  padding: 3px;
+}
+.div2 {
+  background-color: white;
+  color: black;
+  padding: 3px;
+}
+.div3 {
+  background-color: black;
+  color: white;
+  padding: 3px;
+}
+.div5 {
+  text-align: center;
+  font-size: x-large;
+  color:#000000;
+  font-family: "Oswald", "Sans-Serif";
+}
+
+.div1 h4,
+.div2 h4,
+.div3 h4 {
+  margin: 0;
+}
+
+.sobreNosotros {
+  color: white;
+  background-color: black;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.06em;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  align-items: center;
+}
+.sobreNosotros h2 {
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.sobreNosotros a {
+  color: #f26b1d;
+}
+
+.articulos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.06em;
+  font-size: 20px;
+
+}
+
+.catalogo-titulo {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.06em;
+  font-weight: bold;
+  margin: 50px;
+}
+
+.cards-implementos,
+.cards-ropa,
+.cards-accesorios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.implementos-block{
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  color: white;
+}
+.ropa-block{
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  color: white;
+}
+.accesorios-block{
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  color: white;
+}
+.cardArticulo {
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  margin: 10px;
+}
+
+.articulo-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.articulo-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content-info-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #f26b1d;
+}
+
+.content-info-description {
+  font-size: 1em;
+}
+
+.content-info-price {
+  font-size: 1em;
+  color: #f26b1d;
+}
+
+button {
+  background-color: #f26b1d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.producto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  margin: 20px;
+  border: 3px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  max-height: 650px;
+}
+.producto-container {
+  position: relative;
+  max-height: 800px;
+}
+
+.volver {
+  position: absolute;
+  top: 10px; 
+  left: 10px; 
+  margin:20px;
+}
+
+.producto-image img{
+  max-width: 70% ;
+  height: auto;
+}
+.productoDetails{
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.06em;
+}
+.contador {
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.contador button {
+  margin-right: 50px;
+  background-color: rgb(190, 180, 180);
+  
+}
+
+#productoName{
+font-size: 70px;
+font-weight: bold;
+}
+#productoDescription{
+  font-size: 30px;
+
+}
+#productoPrice{
+  font-size: 20px;
+  color: #f26b1d;
+  font-weight: bold ;
+
+}
+.contador {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.productbtn {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Estilos para el contador */
+.contador p {
+  margin: 10px;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.06em;
+  padding:10px;
+}
+#cantidad{
+  background:rgb(228, 224, 224);
+
+}
+
+.contador button {
+  margin: 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: grey;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contador button:hover {
+  background-color: black;
+  color:white;
+}
+
+.productbtn button {
+  margin: 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f26b1d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.productbtn button:hover {
+  background-color: white;
+  color :#f26b1d;
+  border: 1px black outSet;
+  margin: 5px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+
+.settings-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 300px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-menu h3 {
+  margin-top: 0;
+}
+
+.settings-menu label {
+  display: block;
+  margin: 10px 0;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 15px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.font-arial {
+  font-family: Arial, sans-serif;
+}
+
+.font-courier {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.font-georgia {
+  font-family: Georgia, serif;
+}
+
+.font-times {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.font-verdana {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+#closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 20px;
+  color: black;
+}
+
+html[data-font="Arial"] {
+  font-family: Arial, sans-serif;
+}
+
+html[data-font="Courier New"] {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+html[data-font="Georgia"] {
+  font-family: Georgia, serif;
+}
+
+html[data-font="Times New Roman"] {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+html[data-font="Verdana"] {
+  font-family: Verdana, Geneva, sans-serif;
+}
+#navbar,
+.footer {
+  font-family: inherit;
+}
+.miembro {
+  text-align: center;
+  margin: 0 10px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.miembro img {
+  width: 100px; 
+  height: auto;
+  display: block; 
+  margin: 0 auto; 
+}
+.bold-hr {
+  border: none;
+  border-top: 5px solid black; /* Grosor de la línea y color */
+  height: 5px; /* Grosor de la línea */
+}
+.documentacion-container{
+  margin: 20px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: -0.06em;
+  
+}
+.documentacion-container h1,h2{
+font-weight: bold;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Producto</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../Styles/styles.css" />
+    <link rel="icon" href="../Assets/images/JassLogo-removebg-preview.png">
+
+  </head>
+  <body>
+    <div class="producto-container">
+      <button onclick="window.history.back()" class="volver">Volver</button>
+      <div class="producto">
+        <div class="producto-image">
+          <img id="productoImage" src="" alt="" />
+        </div>
+        <div class="producto-details">
+          <h1 id="productoName"></h1>
+          <p id="productoDescription"></p>
+          <p id="productoPrice"></p>
+          <div class="contador">
+            <p>CANTIDAD</p>
+            <button onclick="contar(-1)">-</button>
+            <p id="cantidad" >1</p>
+            <button onclick="contar(1)">+</button>
+          </div>
+          <div class="productbtn">
+            <button onclick="mandarTotal()">COMPRAR</button>
+            <button onclick="añadirCarritoProducto()">AÑADIR AL CARRITO</button>
+            <button class="valoraciones-btn" onclick="window.location.href = 'valoraciones.html'">VER VALORACIONES</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <script>
+     document.addEventListener("DOMContentLoaded", () => {
+  const producto = JSON.parse(localStorage.getItem("productoSeleccionado"));
+  if (producto) {
+    document.getElementById("productoImage").src = producto.image;
+    document.getElementById("productoImage").alt = producto.name;
+    document.getElementById("productoName").innerText = producto.name;
+    document.getElementById("productoDescription").innerText = producto.description;
+    document.getElementById("productoPrice").innerText = `${producto.price.toLocaleString()}`;
+    document.getElementById("productoPrice").value = parseInt(producto.price);
+  } else {
+    console.log("No se encontró el producto seleccionado");
+  }
+});
+
+function contar(valor) {
+  let contador = parseInt(document.getElementById("cantidad").innerText);
+  console.log(contador);
+  if (isNaN(contador)) {
+    contador = 0;
+    console.log(contador);
+    document.getElementById("cantidad").innerText = contador;
+  }
+  if (contador === 1 && valor === -1) {
+    alert("Valor Mínimo");
+    return;
+  }
+  contador += valor;
+  document.getElementById("cantidad").innerText = contador;
+  cambiarTotal(contador);
+}
+
+function cambiarTotal(multiplicador) {
+  const precioActual = parseInt(document.getElementById("productoPrice").value);
+  let precioNuevo;
+
+  if (isNaN(multiplicador)) {
+    alert("Por favor ingrese un número válido para la cantidad.");
+    return;
+  }
+
+  if (multiplicador === 0) {
+    precioNuevo = precioActual;
+  } else {
+    precioNuevo = precioActual * multiplicador;
+  }
+
+  document.getElementById("productoPrice").innerText = `${precioNuevo.toLocaleString()}`;
+}
+
+function añadirCarritoProducto(){
+  const productoCarrito = JSON.parse(localStorage.getItem("productoSeleccionado"));
+  productoCarrito.price = document.getElementById('productoPrice').textContent;
+  if (productoCarrito) {
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito.push(productoCarrito);
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+    } else {
+      console.log("Error al guardar en el carrito");
+    }
+    window.location.href = './carrito.html';
+}
+
+
+function mandarTotal() {
+    const productoCarrito = JSON.parse(localStorage.getItem("productoSeleccionado"));
+    productoCarrito.price = document.getElementById('productoPrice').value;
+    if (productoCarrito) {
+        const total = productoCarrito.price;
+        if (!isNaN(total)) {
+            localStorage.setItem('total', total.toString());
+        }
+    }
+    window.location.href = './pasarelaPago.html';
+}
+    </script>
+  </body>
+</html>

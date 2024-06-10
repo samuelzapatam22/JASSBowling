@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de compra</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <style>
+      .credit-card-img {
+        width: 50px;
+        height: auto;
+      }
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+
+      .form-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .form-header img {
+        margin-right: 10px;
+      }
+
+      .form-title {
+        text-align: center;
+      }
+
+      .btn-primary {
+        background-color: #f26b1d;
+        border-color: #000000;
+      }
+      .btn-primary :hover {
+        background-color: white;
+        border-color: #000000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <img src="../Assets/images/JassLogo.png" alt="Logo" class="logo" />
+        </div>
+        <div class="col-md-10 form-title">
+          <h2 class="text-center">Formulario de Pago</h2>
+        </div>
+      </div>
+      <form id="payment-form">
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" class="form-control" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="card-number">Número de Tarjeta de Crédito:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="card-number"
+            maxlength="19"
+            required
+          />
+          <img id="card-brand" class="credit-card-img" src="" alt="" />
+        </div>
+        <div class="form-group">
+          <label for="security-code">Código de Seguridad:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="security-code"
+            maxlength="4"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="expiration-date">Fecha de Expiración:</label>
+          <input
+            type="month"
+            class="form-control"
+            id="expiration-date"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="address">Dirección:</label>
+          <input type="text" class="form-control" id="address" required />
+        </div>
+        <div class="form-group">
+          <label for="city">Ciudad:</label>
+          <input type="text" class="form-control" id="city" required />
+        </div>
+        <div class="form-group">
+          <label for="total">Total de la Compra:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="total"
+            required
+            readonly
+          />
+        </div>
+        <button  type="submit" class="btn btn-primary">Pagar</button>
+        <button onclick="window.location.href = './catalogo.html'" class="btn btn-primary">Cancelar Compra</button>
+    </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        
+      document.addEventListener("DOMContentLoaded", () => {
+        setTotal();
+      });
+
+      function setTotal() {
+        const total = localStorage.getItem("total").toString();
+        const totalElement = document.getElementById("total");
+
+        if (total && !isNaN(total)) {
+          totalElement.value = total.toString();
+        } else {
+          totalElement.value = "0.00";
+        }
+      }
+
+      document
+        .getElementById("payment-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var name = document.getElementById("name").value;
+          var cardNumber = document.getElementById("card-number").value;
+          var securityCode = document.getElementById("security-code").value;
+          var expirationDate = document.getElementById("expiration-date").value;
+          var address = document.getElementById("address").value;
+          var city = document.getElementById("city").value;
+          var total = document.getElementById("total").value;
+
+          if (!/^[a-zA-Z\s]+$/.test(name)) {
+            alert("El nombre sólo debe contener letras.");
+            return;
+          }
+
+          if (!/^\d{4}-\d{4}-\d{4}-\d{4}$/.test(cardNumber)) {
+            alert(
+              "El número de tarjeta debe tener 16 dígitos numéricos en grupos de cuatro separados por un guion (-)."
+            );
+            return;
+          }
+
+          if (!/^\d{4}$/.test(securityCode)) {
+            alert("El código de seguridad debe tener 4 dígitos numéricos.");
+            return;
+          }
+
+          var currentDate = new Date();
+          var expiration = new Date(expirationDate);
+          if (expiration <= currentDate) {
+            alert("La fecha de expiración debe ser mayor a la fecha actual.");
+            return;
+          }
+
+          var purchaseSummary = `
+                FECHA DE COMPRA: ${currentDate.toLocaleDateString()}
+                HORA COMPRA: ${currentDate.toLocaleTimeString()}
+                TOTAL COMPRA: $${total}
+                Últimos 4 dígitos de su Tarjeta de Crédito: ${cardNumber.slice(
+                  -4
+                )}
+            `;
+          alert(purchaseSummary);
+          localStorage.removeItem("carrito");
+            window.location.href = './index.html';
+        });
+
+      document
+        .getElementById("card-number")
+        .addEventListener("input", function (event) {
+          var cardNumber = event.target.value
+            .replace(/\D/g, "")
+            .substring(0, 16);
+          cardNumber =
+            cardNumber !== "" ? cardNumber.match(/.{1,4}/g).join("-") : "";
+          event.target.value = cardNumber;
+
+          var cardBrand = document.getElementById("card-brand");
+          if (cardNumber.startsWith("4")) {
+            cardBrand.src = "../Assets/images/Visa.jpeg";
+            cardBrand.alt = "Visa";
+          } else if (cardNumber.startsWith("5")) {
+            cardBrand.src = "../Assets/images/Mastercard.jpeg";
+            cardBrand.alt = "MasterCard";
+          } else if (cardNumber.startsWith("3")) {
+            cardBrand.src = "../Assets/images/amex.jpeg";
+            cardBrand.alt = "American Express";
+          } else if (cardNumber.startsWith("7")) {
+            cardBrand.src = "../Assets/images/Diners Club.jpeg";
+            cardBrand.alt = "Diners Club";
+          } else {
+            cardBrand.src = "";
+            cardBrand.alt = "";
+          }
+        });
+    </script>
+    <script>
+      window.onload = function () {
+        var valor = localStorage.getItem("miTotal");
+
+        if (valor) {
+          document.getElementById("total").value = valor;
+        }
+      };
+    </script>
+  </body>
+</html>

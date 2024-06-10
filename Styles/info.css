@@ -1,0 +1,57 @@
+body,
+html {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FF4500;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #FF6347;
+}
+
+.faq {
+    margin: 20px 0;
+}
+
+.question {
+    background-color: #FF9500;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.answer {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}   
+.container {
+    position: relative;
+}
+.doc-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FF4500;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
